@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portraits</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>Portraits</h1>
+
+<p class="gallery-note">
+These portraits were drawn as personal gifts for friends, colleagues, and family members.
+</p>
+
+<div class="gallery">
+  <img src="images/portraits/p51.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p50.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p49.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p48.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p47.jpg" alt="Portrait drawing">
+   <img src="images/portraits/p46.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p45.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p44.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p43.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p42.jpg" alt="Portrait drawing">
+   <img src="images/portraits/p41.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p40.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p39.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p38.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p37.jpg" alt="Portrait drawing">
+   <img src="images/portraits/p36.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p35.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p34.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p33.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p32.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p31.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p30.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p29.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p28.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p27.jpg" alt="Portrait drawing">
+   <img src="images/portraits/p26.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p25.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p24.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p23.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p22.jpg" alt="Portrait drawing">
+   <img src="images/portraits/p21.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p20.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p19.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p18.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p17.jpg" alt="Portrait drawing">
+   <img src="images/portraits/p16.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p15.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p14.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p13.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p12.jpg" alt="Portrait drawing">
+   <img src="images/portraits/p11.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p10.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p09.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p08.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p07.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p06.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p05.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p04.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p03.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p02.jpg" alt="Portrait drawing">
+  <img src="images/portraits/p01.jpg" alt="Portrait drawing">
+  <!-- keep going up to p51 -->
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span id="close">&times;</span>
+  <img id="lightbox-img">
+</div>
+
+<script>
+  const images = document.querySelectorAll(".gallery img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.getElementById("close");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = "flex";
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
