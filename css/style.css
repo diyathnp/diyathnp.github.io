@@ -3,6 +3,7 @@ body {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
+  line-height: 1.6;
 }
 
 h1 {
@@ -10,6 +11,28 @@ h1 {
   margin-bottom: 10px;
 }
 
+h2 {
+  margin-top: 40px;
+}
+
+h3 {
+  margin-top: 25px;
+}
+
+a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+/* Gallery / Art page */
 .gallery-note {
   text-align: center;
   font-style: italic;
@@ -24,6 +47,7 @@ h1 {
 
 .gallery img {
   width: 100%;
+  display: block;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -37,7 +61,7 @@ h1 {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -57,120 +81,110 @@ h1 {
   cursor: pointer;
 }
 
-/* ===========================================
-   Open Textbook Card
-   =========================================== */
-
+/* Open Textbook Card */
 .book-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 30px;
-
-    margin: 40px auto;
-    padding: 25px;
-
-    background: #ffffff;
-
-    border: 1px solid #d8d8d8;
-    border-radius: 12px;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-
-    transition: all 0.25s ease;
-}
-
-.book-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 35px 0;
+  padding: 25px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .book-cover {
-    width: 220px;
-    height: auto;
-
-    border-radius: 8px;
-
-    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-
-    transition: transform 0.25s ease;
+  width: 220px;
+  min-width: 220px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.20);
+  transition: transform 0.25s ease;
 }
 
 .book-cover:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .book-description {
-    flex: 1;
-}
-
-.book-description h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
-
-    color: #0b4f8a;
-
-    font-size: 1.8rem;
+  flex: 1;
 }
 
 .book-description h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-
-    color: #0b4f8a;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #0b4f8a;
+  font-size: 30px;
 }
 
 .book-description p {
-    margin-bottom: 15px;
-
-    line-height: 1.7;
-
-    color: #444;
-}
-
-.book-description strong {
-    color: #222;
+  margin-bottom: 15px;
+  color: #444;
 }
 
 .download-button {
-    display: inline-block;
-
-    margin-top: 10px;
-
-    padding: 12px 24px;
-
-    background: #0b4f8a;
-
-    color: white !important;
-
-    text-decoration: none;
-
-    border-radius: 8px;
-
-    font-weight: bold;
-
-    transition: background 0.25s ease;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #0b4f8a;
+  color: white !important;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .download-button:hover {
-    background: #083c69;
+  background: #083c69;
+  text-decoration: none;
 }
 
-/* Responsive layout */
+/* Resource tables / lists */
+.toc {
+  list-style: none;
+  padding-left: 0;
+}
 
+.toc li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted #ccc;
+  padding: 7px 0;
+  gap: 15px;
+}
+
+.toc .meta {
+  color: #666;
+  white-space: nowrap;
+  margin-left: 15px;
+}
+
+.note {
+  color: #555;
+  font-size: 0.95em;
+  margin-top: 20px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .book-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .book-card {
+  .book-cover {
+    width: 180px;
+    min-width: 180px;
+  }
 
-        flex-direction: column;
+  .toc li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-        align-items: center;
-
-        text-align: center;
-    }
-
-    .book-cover {
-
-        width: 180px;
-    }
-
+  .toc .meta {
+    margin-left: 0;
+  }
 }
