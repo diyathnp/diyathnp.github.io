@@ -9,7 +9,7 @@
       max-width: 800px;
       margin: auto;
       font-family: Arial, sans-serif;
-      line-height: 1.2;
+      line-height: 1.5;
       padding: 20px;
     }
 
@@ -28,13 +28,18 @@
 
     h1 {
       font-size: 32px;
-      line-height: 1.6;
+      line-height: 1.2;
       margin-top: 10px;
     }
 
     h2 {
       margin-top: 35px;
       font-size: 28px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      font-size: 22px;
     }
 
     ul {
@@ -52,31 +57,103 @@
       margin-top: 20px;
     }
 
-.toc {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 10px;
-}
+    .toc {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
 
-.toc li {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px dotted #ccc;
-  padding: 6px 0;
-  margin-bottom: 0;
-}
+    .toc li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted #ccc;
+      padding: 6px 0;
+      margin-bottom: 0;
+      gap: 15px;
+    }
 
-.toc a {
-  font-weight: 600;
-}
+    .toc a {
+      font-weight: 600;
+    }
 
-.toc .meta {
-  white-space: nowrap;
-  color: #555;
-  margin-left: 15px;
-}
+    .toc .meta {
+      white-space: nowrap;
+      color: #555;
+      margin-left: 15px;
+    }
 
-    
+    .book-card {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      margin: 24px 0 40px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .book-cover {
+      width: 220px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+      flex: 0 0 auto;
+      display: block;
+    }
+
+    .book-description {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .book-description h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 26px;
+    }
+
+    .book-description p {
+      margin: 0 0 14px 0;
+    }
+
+    .download-button {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 18px;
+      background: #0b4f8a;
+      color: #fff !important;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .download-button:hover {
+      background: #083c69;
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+      .book-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .book-cover {
+        width: 180px;
+      }
+
+      .toc li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .toc .meta {
+        margin-left: 0;
+      }
+    }
   </style>
 </head>
 
@@ -97,109 +174,84 @@
     made available for educational purposes.
   </p>
 
-<h2>Open Textbook</h2>
+  <h2>Open Textbook</h2>
 
-<div class="book-card">
-
-    <a href="resources/calculus-book/analytic-geometry-and-calculus-v1.pdf" target="_blank">
-
-        <img src="resources/calculus-book/cover.png"
-             alt="Analytic Geometry & Calculus"
-             class="book-cover">
-
+  <div class="book-card">
+    <a href="resources/calculus-book/analytic-geometry-and-calculus-v1.pdf" target="_blank" rel="noopener">
+      <img src="resources/calculus-book/cover.png"
+           alt="Analytic Geometry & Calculus"
+           class="book-cover">
     </a>
 
     <div class="book-description">
+      <h3>Analytic Geometry &amp; Calculus</h3>
 
-        <h2>Analytic Geometry &amp; Calculus</h2>
+      <p>
+        <strong>Lecture Notes, Worked Examples, and Practice Problems with Solutions</strong>
+      </p>
 
-        <p>
-            <strong>Lecture Notes, Worked Examples,
-            and Practice Problems with Solutions</strong>
-        </p>
+      <p>
+        A free open textbook developed for <strong>MATH-I 165: Analytic Geometry &amp; Calculus I</strong>
+        at Indiana University Indianapolis.
+      </p>
 
-             <p>
-            The book contains nearly <strong>600 pages</strong> of
-            explanations, worked examples,
-            chapter exercises,
-            practice problems,
-            and selected solutions.
-        </p>
+      <p>
+        The book contains nearly <strong>600 pages</strong> of explanations, worked examples,
+        chapter exercises, practice problems, and selected solutions.
+      </p>
 
-        <p>
-
-            <a href="resources/calculus-book/analytic-geometry-and-calculus-v1.pdf"
-               target="_blank">
-
-               📘 Download PDF
-
-            </a>
-
-        </p>
-
+      <p>
+        <a class="download-button"
+           href="resources/calculus-book/analytic-geometry-and-calculus-v1.pdf"
+           target="_blank"
+           rel="noopener">
+          📘 Download PDF
+        </a>
+      </p>
     </div>
+  </div>
 
-</div>
+  <h2>Lecture Notes</h2>
 
-<div class="book-card">
+  <h3>MA 125: Business Calculus (Butler University)</h3>
+  <ul class="toc">
+    <li>
+      <a href="resources/butler-notes/butler-bcalc-ch5.3-Consumer Loans and Amortization.pdf" target="_blank" rel="noopener">
+        Chapter 5.3. Consumer Loans and Amortization
+      </a>
+      <span class="meta">PDF</span>
+    </li>
+    <li>
+      <a href="resources/butler-notes/butler-bcalc-ch5.4-Bonds and Treasury Bills.pdf" target="_blank" rel="noopener">
+        Chapter 5.4. Bonds and Treasury Bills
+      </a>
+      <span class="meta">PDF</span>
+    </li>
+    <li>
+      <a href="resources/butler-notes/butler-bcalc-ch12.1-Local_Extrema.pdf" target="_blank" rel="noopener">
+        Chapter 12.1. Local Extrema
+      </a>
+      <span class="meta">PDF</span>
+    </li>
+  </ul>
 
-    ...
+  <h3>MATH 261: Multivariable Calculus (Ivy Tech)</h3>
+  <ul class="toc">
+    <li>
+      <a href="resources/Ivy Tech/Ivy_Tech_Final_Exam_Review.pdf" target="_blank" rel="noopener">
+        Final Exam Review
+      </a>
+      <span class="meta">PDF</span>
+    </li>
+  </ul>
 
-</div>
-
-<h2>Lecture Notes</h2>
-
-<!-- Existing Business Calculus notes -->
-
-...
-
-
-  
- <h2>Course Notes</h2>
-
-<h3>MA 125: Business Calculus (Butler University)</h3>
-
-<ul class="toc">
-  <li>
-    <a href="resources/butler-notes/butler-bcalc-ch5.3-Consumer Loans and Amortization.pdf" target="_blank" rel="noopener">
-      Chapter 5.3. Consumer Loans and Amortization
-    </a>
-    <span class="meta">PDF</span>
-  </li>
-
-  <li>
-    <a href="resources/butler-notes/butler-bcalc-ch5.4-Bonds and Treasury Bills.pdf" target="_blank" rel="noopener">
-      Chapter 5.4. Bonds and Treasury Bills
-    </a>
-    <span class="meta">PDF</span>
-  </li>
-
-  <li>
-    <a href="resources/butler-notes/butler-bcalc-ch12.1-Local_Extrema.pdf" target="_blank" rel="noopener">
-      Chapter 12.1. Local Extrema
-    </a>
-    <span class="meta">PDF</span>
-  </li>
-
-<h3>MATH 261 – Multivariable Calculus (Ivy Tech)</h3>
- <li>
-    <a href="resources/Ivy Tech/Ivy_Tech_Final_Exam_Review.pdf" target="_blank" rel="noopener">
-      Final Exam Review
-    </a>
-    <span class="meta">PDF</span>
-  </li>
-
-Last updated: Fall 2025.
-</ul>
-
+  <p class="note">Last updated: Fall 2025.</p>
 
   <h2>Graduate Qualifying Exam Materials</h2>
   <ul>
     <li>
       <strong>MATH 54400: Real Analysis Qualifying Exam</strong>:
-      <a href="resources/real-analysis-qual-solutions.pdf"
-         target="_blank"
-         rel="noopener">
+      <a href="resources/real-analysis-qual-solutions.pdf" target="_blank" rel="noopener">
         Selected Solutions (PDF)
       </a>
     </li>
