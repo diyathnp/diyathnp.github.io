@@ -56,3 +56,121 @@ h1 {
   color: white;
   cursor: pointer;
 }
+
+/* ===========================================
+   Open Textbook Card
+   =========================================== */
+
+.book-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+
+    margin: 40px auto;
+    padding: 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    transition: all 0.25s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.book-cover {
+    width: 220px;
+    height: auto;
+
+    border-radius: 8px;
+
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+
+    transition: transform 0.25s ease;
+}
+
+.book-cover:hover {
+    transform: scale(1.03);
+}
+
+.book-description {
+    flex: 1;
+}
+
+.book-description h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    color: #0b4f8a;
+
+    font-size: 1.8rem;
+}
+
+.book-description h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    color: #0b4f8a;
+}
+
+.book-description p {
+    margin-bottom: 15px;
+
+    line-height: 1.7;
+
+    color: #444;
+}
+
+.book-description strong {
+    color: #222;
+}
+
+.download-button {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 12px 24px;
+
+    background: #0b4f8a;
+
+    color: white !important;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: background 0.25s ease;
+}
+
+.download-button:hover {
+    background: #083c69;
+}
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+
+    .book-card {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .book-cover {
+
+        width: 180px;
+    }
+
+}
