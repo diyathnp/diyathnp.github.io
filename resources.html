@@ -3,7 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <title>Resources | Diyath Nelaka Pannipitiya</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    body {
+      max-width: 800px;
+      margin: auto;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    nav {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+
+    h2 {
+      margin-top: 35px;
+      font-size: 28px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      font-size: 22px;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .note {
+      color: #555;
+      font-size: 0.95em;
+      margin-top: 20px;
+    }
+
+    .toc {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+
+    .toc li {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted #ccc;
+      padding: 6px 0;
+      margin-bottom: 0;
+      gap: 15px;
+    }
+
+    .toc a {
+      font-weight: 600;
+    }
+
+    .toc .meta {
+      white-space: nowrap;
+      color: #555;
+      margin-left: 15px;
+    }
+
+    .book-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      margin: 35px 0;
+      padding: 25px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .book-cover {
+      width: 220px;
+      min-width: 220px;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 5px 14px rgba(0, 0, 0, 0.20);
+      flex-shrink: 0;
+    }
+
+    .book-description {
+      flex: 1;
+    }
+
+    .book-description h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      color: #0b4f8a;
+      font-size: 30px;
+    }
+
+    .book-description p {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .download-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #0b4f8a;
+      color: white !important;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .download-button:hover {
+      background: #083c69;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .book-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .book-cover {
+        width: 180px;
+        min-width: 180px;
+      }
+
+      .toc li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .toc .meta {
+        margin-left: 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -42,8 +196,7 @@
       </p>
 
       <p>
-        A free open textbook originally developed for <strong>MATH-I 165: Analytic Geometry &amp; Calculus I</strong>
-        at Indiana University Indianapolis, this open textbook is intended for students and instructors everywhere.
+        A free open textbook covering a standard first course in analytic geometry and calculus.
       </p>
 
       <p>
